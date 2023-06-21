@@ -1,0 +1,14 @@
+@media screen and (min-width: 768px) {
+  .side-nav{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .nav__main{
+    display: none;
+      &__logo{
+        width: 45%;
+      }
+  }
+}

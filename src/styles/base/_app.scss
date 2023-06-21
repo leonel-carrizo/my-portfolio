@@ -1,0 +1,15 @@
+body {
+  height: 100vh;
+  width: 100%;
+  color: #e6e6e9;
+}
+.magicpattern {
+  background-image: url('/src/assets/background-pattern-abs.svg');
+  // background-color: #9ca3af;
+  // background-color: #99999b;
+  // background-color: #2a282a;
+  background-color: #1b1b1c;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 150rem;
+}
