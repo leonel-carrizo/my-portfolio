@@ -1,3 +1,6 @@
+@use "./abstracts/colors";
+@use "./abstracts/variables";
+@use "./themes/themes";
 @use "./base/normalize";
 @use "./base/app";
 @use "../components/Layouts/Header/Header";

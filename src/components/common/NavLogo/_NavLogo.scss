@@ -1,4 +1,4 @@
-
+@use '../../../styles/abstracts/colors' as c;
   .nav-logo {
     display: flex;
     align-items: center;
@@ -15,5 +15,6 @@
       font-size: calc(0.5rem + 0.5vw);
       font-weight: 600;
       text-transform: uppercase;
+      color: c.$primary--color;
     }
   }

@@ -1,15 +1,16 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+@use '../abstracts/funtions' as f;
+
 body {
-  height: 100vh;
-  width: 100%;
-  color: #e6e6e9;
-}
-.magicpattern {
-  background-image: url('/src/assets/background-pattern-abs.svg');
-  // background-color: #9ca3af;
-  // background-color: #99999b;
-  // background-color: #2a282a;
-  background-color: #1b1b1c;
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: 150rem;
+  @include m.themed() {
+    transition: v.$transition-1;
+    color: f.t(title);
+    background-image: f.t(bg);
+    background-color: f.t(bg-color);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120rem;
+    height: 100vh;
+  }
 }

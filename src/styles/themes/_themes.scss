@@ -1,4 +1,4 @@
-// @use '../abstracts/mixins';
+@use "sass:meta";
 @use '../abstracts/colors' as c;
 
 $themes: (
@@ -23,12 +23,3 @@ $themes: (
     link: c.$accent--color,
   ),
 );
-
-@function t($keys...){
-  $value: $themes;
-
-  @each $key in $keys{
-    $value: map-get($value, $key);
-  }
-  @return $value;
-}

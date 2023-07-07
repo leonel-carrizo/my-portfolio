@@ -1,15 +1,15 @@
 // colors palette:
-$primary--color: #171a20;
-$secondary--color: #cfd1ce;
-$tertiary--color: #f2f2ec;
-$white--color: #fefff9;
-$dark--color: #1B1B1C;
-$greydark--color: #343A40;
-$accent--color: #ff1a10;
+$primary--color: #171a20 !default;
+$secondary--color: #cfd1ce !default;
+$tertiary--color: #f2f2ec !default;
+$white--color: #fefff9 !default;
+$dark--color: #1B1B1C !default;
+$greydark--color: #343A40 !default;
+$accent--color: #ff1a10 !default;
 
 // complementary colors:
-$success--color: #28A745;
-$danger--color: #DC3545;
-$warning--color: #ffc107;
-$info--color: #17A2B8;
-$light--color: #F8F9FA;
+$success--color: #28A745 !default;
+$danger--color: #DC3545 !default;
+$warning--color: #ffc107 !default;
+$info--color: #17A2B8 !default;
+$light--color: #F8F9FA !default;
