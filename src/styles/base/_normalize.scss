@@ -29,7 +29,7 @@ body {
 }
 
 /*Avoid averflowing problems on some browsers when use margings styles*/
-nav{
+nav {
   box-sizing: border-box;
 }
 
@@ -63,11 +63,11 @@ td {
 }
 
 /* avoid problems with svg */
-/* svg{
+svg{
     width: 100%;
     display: block;
-    fill: currentColor;
-} */
+    // fill: currentColor;
+}
 
 /* Sections  ========================================================================== */
 
@@ -168,7 +168,7 @@ h3,
 h4,
 h5,
 h6,
-p{
+p {
   margin: 0;
 }
 

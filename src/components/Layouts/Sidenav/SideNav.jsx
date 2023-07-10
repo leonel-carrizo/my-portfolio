@@ -1,26 +1,25 @@
 import { useState } from 'react'
 import NavLogo from '../../common/NavLogo/NavLogo'
 import SideNavMenu from '../../common/SideNavMenu/SideNavMenu'
-import { AiOutlineMenu } from 'react-icons/ai'
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 
-export const SideNAv = () => {
-  const [sidenav, setNav] = useState(false)
+export const SideNav = () => {
+  const [isSideNavOpen, setSideNavOpen] = useState(false)
 
-  const handleNav = () => {
-    setNav(!sidenav)
+  const handleSideNavToggle = () => {
+    setSideNavOpen(!isSideNavOpen)
   }
 
   return (
     <div className='side-nav'>
 
-      <NavLogo path='/LC-logo-1.1.svg' title='Leonel carrizo' />
+      <NavLogo title='Leonel carrizo' />
 
-      <div onClick={handleNav} className='side-nav__toggle-icon'>
-        <AiOutlineMenu />
+      <div onClick={handleSideNavToggle} className='side-nav__toggle-icon'>
+        {isSideNavOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
       </div>
-
       {
-        sidenav
+        isSideNavOpen
           ? (<SideNavMenu />)
           : ''
       }

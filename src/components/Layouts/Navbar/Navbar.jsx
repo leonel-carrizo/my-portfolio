@@ -1,15 +1,22 @@
+import { useContext } from 'react'
+import { ThemeContext } from '../../../contexts/ThemeContext'
+
 import NavLogo from '../../common/NavLogo/NavLogo'
 import MainMenu from '../../common/MainMenu/MainMenu'
-import { SideNAv } from '../Sidenav/SideNav'
+import { SideNav } from '../Sidenav/SideNav'
+import ThemeToggleButton from '../../common/ThemeToggleButton/ThemeToggleButton'
 
 function Navbar () {
+  const { handleTheme, theme } = useContext(ThemeContext)
+
   return (
     <nav className='nav'>
       <div className='nav__main'>
-        <NavLogo path='/LC-logo-1.1.svg' title='Leonel carrizo' />
+        <NavLogo title='Leonel carrizo' />
         <MainMenu />
+        <ThemeToggleButton onClick={handleTheme} isDark={theme === 'dark'} />
       </div>
-      <SideNAv />
+      <SideNav />
     </nav>
   )
 }

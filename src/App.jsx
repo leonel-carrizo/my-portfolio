@@ -1,14 +1,15 @@
 import { useContext } from 'react'
+import { ThemeContext } from './contexts/ThemeContext'
 import Home from './Pages/Home/Home'
-import { ThemeConext } from './contexts/ThemeContext'
 
 function App () {
-  const theme = useContext(ThemeConext)
-  console.log('theme', theme)
+  const { theme } = useContext(ThemeContext)
+
   return (
-    <div className='theme-dark'>
+    <div className={`App theme-${theme}`}>
       <Home />
     </div>
+
   )
 }
 

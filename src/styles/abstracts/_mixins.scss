@@ -1,14 +1,15 @@
-@use 'sass:meta';
-@use '../themes/themes' as *;
+@use 'sass:map';
+@use '../themes/themes' as th;
+@use './variables' as v;
 
 $theme-map: null;
 @mixin themed() {
-  @each $theme, $map in $themes {
+  @each $theme, $map in th.$themes {
     .theme-#{$theme} {
       $theme-map: () !global;
       @each $key, $submap in $map {
-        $value: map-get(map-get($themes, $theme), '#{$key}');
-        $theme-map: map-merge(
+        $value: map.get(map.get(th.$themes, $theme), '#{$key}');
+        $theme-map: map.merge(
           $theme-map,
           (
             $key: $value
@@ -18,4 +19,16 @@ $theme-map: null;
       @content;
     }
   }
+}
+
+@mixin bg-config() {
+  transition: v.$transition-bg;
+  background-image: t(bg);
+  background-color: t(bg-color);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@function t($key) {
+  @return map.get($theme-map, $key);
 }

@@ -2,7 +2,7 @@ import { AiOutlineHome, AiOutlineProject, AiOutlineUser, AiOutlineContacts } fro
 
 function SideNavMenu () {
   return (
-    <nav>
+    <>
 
       <ul className='side-nav__list'>
 
@@ -36,7 +36,7 @@ function SideNavMenu () {
 
       </ul>
 
-    </nav>
+    </>
   )
 }
 

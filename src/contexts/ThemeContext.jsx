@@ -1,18 +1,30 @@
-import { createContext } from 'react'
+/* eslint-env browser */
+import { createContext, useEffect, useState } from 'react'
 
-export const ThemeConext = createContext()
+export const ThemeContext = createContext()
 
 export const ThemeProvider = ({ children }) => {
+  const [isDark, setIsDark] = useState(false)
+
+  const theme = isDark ? 'dark' : 'light'
+
+  const handleTheme = () => {
+    const newIsDark = !isDark
+    localStorage.setItem('isDark', JSON.stringify(newIsDark))
+    setIsDark(newIsDark)
+  }
+
+  useEffect(() => {
+    const storedIsDark = localStorage.getItem('isDark')
+    const isDark = storedIsDark ? JSON.parse(storedIsDark) : false
+    setIsDark(isDark)
+  }, [])
+
   return (
-    <ThemeConext.Provider
-      value={
-        [
-          { Theme, isDark },
-          toggleTheme
-        ]
-      }
+    <ThemeContext.Provider
+      value={{ theme, handleTheme }}
     >
       {children}
-    </ThemeConext.Provider>
+    </ThemeContext.Provider>
   )
 }

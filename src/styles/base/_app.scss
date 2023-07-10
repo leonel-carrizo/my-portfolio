@@ -1,16 +1,23 @@
 @use '../abstracts/variables' as v;
 @use '../abstracts/mixins' as m;
-@use '../abstracts/funtions' as f;
 
-body {
+@font-face {
+  font-family: 'gotham';
+  src: url('../../assets/fonts/GothamBook.ttf') format('truetype');
+}
+
+
+#root {
   @include m.themed() {
-    transition: v.$transition-1;
-    color: f.t(title);
-    background-image: f.t(bg);
-    background-color: f.t(bg-color);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 120rem;
+    color: m.t(title);
+    @include m.bg-config();
     height: 100vh;
+    .logo{
+      fill: m.t(title);
+    }
   }
+}
+
+body{
+  font-family: 'gotham', 'Arial Narrow', system-ui, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
 }
