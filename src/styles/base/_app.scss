@@ -3,21 +3,15 @@
 
 @font-face {
   font-family: 'gotham';
-  src: url('../../assets/fonts/GothamBook.ttf') format('truetype');
+  src: url('/src/assets/fonts/GothamBlack.otf') format('opentype');
 }
 
-
-#root {
-  @include m.themed() {
+@include m.themed() {
+  .app {
+    font-family: Tahoma, Geneva, Verdana, sans-serif, system-ui, Arial, sans-serif;
+    height: 100vh;
     color: m.t(title);
     @include m.bg-config();
-    height: 100vh;
-    .logo{
-      fill: m.t(title);
-    }
+    background-color: m.t(bg-color);
   }
-}
-
-body{
-  font-family: 'gotham', 'Arial Narrow', system-ui, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
 }

@@ -1,11 +1,11 @@
 @use 'sass:map';
-@use '../themes/themes' as th;
-@use './variables' as v;
+@use '/src/styles/themes/themes' as th;
+@use '/src/styles/abstracts/variables' as v;
 
 $theme-map: null;
 @mixin themed() {
   @each $theme, $map in th.$themes {
-    .theme-#{$theme} {
+    .theme-#{$theme}{
       $theme-map: () !global;
       @each $key, $submap in $map {
         $value: map.get(map.get(th.$themes, $theme), '#{$key}');
@@ -24,7 +24,6 @@ $theme-map: null;
 @mixin bg-config() {
   transition: v.$transition-bg;
   background-image: t(bg);
-  background-color: t(bg-color);
   background-repeat: no-repeat;
   background-position: center;
 }

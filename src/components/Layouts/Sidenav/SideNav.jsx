@@ -1,28 +1,17 @@
-import { useState } from 'react'
-import NavLogo from '../../common/NavLogo/NavLogo'
+import { useContext } from 'react'
+import { ThemeContext } from '../../../contexts/ThemeContext'
+
 import SideNavMenu from '../../common/SideNavMenu/SideNavMenu'
-import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
+import ThemeToggleButton from '../../common/ThemeToggleButton/ThemeToggleButton'
 
-export const SideNav = () => {
-  const [isSideNavOpen, setSideNavOpen] = useState(false)
-
-  const handleSideNavToggle = () => {
-    setSideNavOpen(!isSideNavOpen)
-  }
+const SideNav = () => {
+  const { handleTheme, theme } = useContext(ThemeContext)
 
   return (
     <div className='side-nav'>
-
-      <NavLogo title='Leonel carrizo' />
-
-      <div onClick={handleSideNavToggle} className='side-nav__toggle-icon'>
-        {isSideNavOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
-      </div>
-      {
-        isSideNavOpen
-          ? (<SideNavMenu />)
-          : ''
-      }
+      <ThemeToggleButton onClick={handleTheme} isDark={theme === 'dark'} />
+      <SideNavMenu />
     </div>
   )
 }
+export default SideNav

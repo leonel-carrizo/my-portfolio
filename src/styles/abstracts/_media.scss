@@ -1,14 +1,19 @@
 @media screen and (min-width: 768px) {
-  .side-nav{
+  .side-nav {
+    display: none;
+  }
+  .button__toggle-menu{
     display: none;
   }
 }
 
-@media screen and (max-width: 767px){
-  .nav__main{
-    display: none;
-      &__logo{
-        width: 45%;
-      }
+@media screen and (max-width: 767px) {
+  .nav__main {
+    &-menu {
+      display: none;
+    }
+    .button__toggle-theme{
+      display: none;
+    }
   }
 }

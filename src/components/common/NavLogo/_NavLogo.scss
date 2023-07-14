@@ -1,15 +1,22 @@
-.nav-logo {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  height: 3rem;
-  &__img {
-    width: calc(0.8rem + 1.6vw);
-  }
-  &__title {
-    font-size: calc(0.5rem + 1vw);
-    font-weight: 600;
-    text-transform: uppercase;
+@use '../../../styles/abstracts/variables' as v;
+@use '../../../styles/abstracts/mixins' as m;
+
+@include m.themed() {
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    transition: v.$transition-1;
+    &__img {
+      transition: v.$transition-1;
+      width: 1.5em;
+      fill: m.t(title);
+    }
+    &__title {
+      font-size: 1.2em;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
   }
 }

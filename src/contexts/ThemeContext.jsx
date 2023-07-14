@@ -4,7 +4,7 @@ import { createContext, useEffect, useState } from 'react'
 export const ThemeContext = createContext()
 
 export const ThemeProvider = ({ children }) => {
-  const [isDark, setIsDark] = useState(false)
+  const [isDark, setIsDark] = useState(true)
 
   const theme = isDark ? 'dark' : 'light'
 
