@@ -8,7 +8,7 @@
 
 @include m.themed() {
   .app {
-    font-family: Tahoma, Geneva, Verdana, sans-serif, system-ui, Arial, sans-serif;
+    font-family: 'gotham', Tahoma, Verdana, sans-serif, system-ui, Arial;
     height: 100vh;
     color: m.t(title);
     @include m.bg-config();

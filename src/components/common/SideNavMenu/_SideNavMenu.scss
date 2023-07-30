@@ -26,23 +26,23 @@
       transition: v.$transition-1;
       cursor: pointer;
       padding: 0.6rem;
-      color: m.t(bg-color);
     }
     &-link {
       display: flex;
       gap: 1rem;
     }
     &-icon {
-      font-size: 20px;
+      font-size: 1.2em;
     }
-    &_-ext {
+    &-text {
       font-size: 1rem;
       font-weight: 600;
+      text-align: center;
     }
     &-item:hover {
       transform: v.$translate-1;
-      background-color: m.t(text-imp);
-      color: m.t(text);
+      background-color: m.t(title);
+      color: m.t(bg-color);
     }
   }
 }
