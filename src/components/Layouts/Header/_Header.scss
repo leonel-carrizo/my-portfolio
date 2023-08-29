@@ -1,7 +1,12 @@
-nav{
-  height: 5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+@use '../../../styles/abstracts/mixins' as m;
+
+@include m.themed(){
+  nav{
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+     background-color: m.t(bg-color);
+  }
 }
