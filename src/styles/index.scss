@@ -4,8 +4,8 @@
 @use './abstracts/variables';
 @use './themes/themes';
 @use '../components/Layouts/Header/Header';
-@use '../components/layouts/Navbar/Navbar';
-@use '../components/layouts/Sidenav/SideNav';
+@use '../components/Layouts/Navbar/Navbar';
+@use '../components/Layouts/Sidenav/SideNav';
 @use '../components/common/SideNavMenu/SideNavMenu';
 @use '/src/components//common/NavLogo/NavLogo';
 @use '../components/common/MainMenu/MainMenu.scss';
