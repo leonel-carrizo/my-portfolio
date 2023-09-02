@@ -1,4 +1,4 @@
-import Logo from '../Logo/logo'
+import Logo from '../Logo/Logo.jsx'
 
 const NavLogo = ({ title }) => {
   return (
