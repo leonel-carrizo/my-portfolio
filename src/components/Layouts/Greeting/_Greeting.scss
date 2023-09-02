@@ -1,0 +1,13 @@
+.greeting-section{
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  justify-content: center;
+  .section-name{
+    font-size: 2rem;
+  }
+    
+   .section-img{
+     width: 350px;
+   }
+}
