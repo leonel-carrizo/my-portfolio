@@ -3,11 +3,11 @@ import { ThemeContext } from '../../../contexts/ThemeContext'
 
 function Greeting ({ name }){
   const { handleTheme, theme } = useContext(ThemeContext)
-  
+
   return (
     <section className='greeting-section'>
       <div className='greeting-section_content'>
-        <p> Hi I'm </p> 
+        <p> Hi I'm </p>
         <h1 className='section-name'>Leonel Carrizo</h1>
         <p>Software developer</p>
       </div>
