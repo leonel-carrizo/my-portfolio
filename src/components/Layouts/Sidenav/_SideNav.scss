@@ -1,6 +1,7 @@
 @use '../../../styles/abstracts/colors' as c;
 @use '../../../styles/abstracts/variables' as v;
 @use '../../../styles/abstracts/mixins' as m;
+@forward '../../../styles/abstracts/media';
 
 .side-nav {
   position: absolute;
@@ -16,4 +17,3 @@
   }
 }
 
-@import '../../../styles/abstracts/media';

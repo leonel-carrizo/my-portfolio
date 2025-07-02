@@ -1,5 +1,6 @@
 @use '../../../styles/abstracts/variables' as v;
 @use '../../../styles/abstracts/colors' as c;
+@forward '../../../styles/abstracts/media';
 
 .nav__main{
     &-menu{
