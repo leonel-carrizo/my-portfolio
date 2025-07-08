@@ -21,13 +21,15 @@ $theme-map: null;
   }
 }
 
+@function t($key) {
+  @return map.get($theme-map, $key);
+}
+
 @mixin bg-config() {
   transition: v.$transition-bg;
   background-image: t(bg);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 }
 
-@function t($key) {
-  @return map.get($theme-map, $key);
-}

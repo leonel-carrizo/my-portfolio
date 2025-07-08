@@ -1,8 +1,8 @@
- import Greeting from '../Greeting/Greeting'
+import Greeting from '../Greeting/Greeting'
 
 function Main () {
   return (
-    <Greeting />
+    <Greeting name='Leo' />
   )
 }
 

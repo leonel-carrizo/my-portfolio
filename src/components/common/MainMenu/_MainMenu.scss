@@ -1,6 +1,6 @@
 @use '../../../styles/abstracts/variables' as v;
 @use '../../../styles/abstracts/colors' as c;
-@forward '../../../styles/abstracts/media';
+@use '../../../styles/abstracts/media';
 
 .nav__main{
     &-menu{
@@ -24,4 +24,13 @@
     // TODO: create hightliting when be active
   }
 
-  @import '../../../styles/abstracts/media';
+@include media.responsive(md, max-width) {
+  .nav__main {
+    &-menu {
+      display: none;
+    }
+    .button__toggle-theme{
+      display: none;
+    }
+  }
+}

@@ -1,7 +1,7 @@
 @use '../../../styles/abstracts/colors' as c;
 @use '../../../styles/abstracts/variables' as v;
 @use '../../../styles/abstracts/mixins' as m;
-@forward '../../../styles/abstracts/media';
+@use '../../../styles/abstracts/media' as media;
 
 .side-nav {
   position: absolute;
@@ -13,7 +13,16 @@
     position: relative;
     display: flex;
     justify-content: center;
-    top: 6rem
+    top: 6rem;
   }
+
 }
 
+@include media.responsive(md, min-width) {
+  .side-nav {
+    display: none;
+  }
+  .button__toggle-menu{
+    display: none;
+  }
+}

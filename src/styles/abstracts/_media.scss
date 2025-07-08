@@ -1,19 +1,49 @@
-@media screen and (min-width: 768px) {
-  .side-nav {
-    display: none;
-  }
-  .button__toggle-menu{
-    display: none;
+@use 'sass:map';
+
+$breakpoints: (
+  xs: 375px,
+  sm: 430px,
+  md: 769px,
+  lg: 1024px,
+  lx: 1280px,
+);
+
+@mixin  responsive($size, $prop) {
+  @media screen and ($prop: map.get($breakpoints, $size)) {
+    @content;
   }
 }
 
-@media screen and (max-width: 767px) {
-  .nav__main {
-    &-menu {
-      display: none;
-    }
-    .button__toggle-theme{
-      display: none;
-    }
-  }
-}
+// @media screen and (min-width: 768px) {
+//   .side-nav {
+//     display: none;
+//   }
+//   .button__toggle-menu{
+//     display: none;
+//   }
+// }
+//
+// @media screen and (max-width: 767px) {
+//   .nav__main {
+//     &-menu {
+//       display: none;
+//     }
+//     .button__toggle-theme{
+//       display: none;
+//     }
+//   }
+// }
+//
+// @media  screen and (max-width: 426px) {
+//   .greeting-section{
+//     display: flex;
+//     flex-direction: column;
+//   }
+// }
+//
+// @media screen and (max-width: 320px){
+//   .greeting-section{
+//     display: grid;
+//     gap: 2rem
+//   }
+// }
