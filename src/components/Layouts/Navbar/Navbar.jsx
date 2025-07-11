@@ -17,16 +17,15 @@ function Navbar () {
 
   return (
     <nav className='nav'>
+      <NavLogo title='Leonel carrizo' />
       <div className='nav__main'>
 
-        <NavLogo title='Leonel carrizo' />
         <MainMenu />
-        <ThemeToggleButton onClick={handleTheme} isDark={theme === 'dark'} />
 
-        <div onClick={handleSideNavToggle} className='button__toggle-menu'>
-          {isSideNavOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
-        </div>
-
+      </div>
+      <ThemeToggleButton onClick={handleTheme} isDark={theme === 'dark'} />
+      <div onClick={handleSideNavToggle} className='button__toggle-menu'>
+        {isSideNavOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
       </div>
       {
         isSideNavOpen

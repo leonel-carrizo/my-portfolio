@@ -8,10 +8,9 @@
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      width: 50%;
       height: 3rem;
       flex-direction: row;
-      gap: 1.5rem;
+      gap: 2rem;
     }
     &-link{
       font-weight: 600;
@@ -27,9 +26,6 @@
 @include media.responsive(md, max-width) {
   .nav__main {
     &-menu {
-      display: none;
-    }
-    .button__toggle-theme{
       display: none;
     }
   }
