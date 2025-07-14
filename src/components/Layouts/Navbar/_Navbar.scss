@@ -2,6 +2,20 @@
 @use '../../../styles/abstracts/mixins' as m;
 @use '../../../styles/abstracts/media' as media;
 
+@include m.themed() {
+  .nav {
+    background-color: m.t(bg-color);
+  }
+}
+
+.nav {
+  width: 100vw;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+}
 
 .button__toggle-menu {
   transition: v.$transition-1;
@@ -18,6 +32,12 @@
     display: none;
   }
   .button__toggle-menu{
+    display: none;
+  }
+}
+
+@include media.responsive(md, max-width) {
+  .button__toggle-theme {
     display: none;
   }
 }
