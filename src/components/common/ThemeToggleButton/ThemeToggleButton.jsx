@@ -1,4 +1,3 @@
-
 function ThemeToggleButton ({ onClick, isDark }) {
   return (
     <div className='button__toggle-theme'>

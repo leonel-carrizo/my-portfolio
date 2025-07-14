@@ -2,29 +2,22 @@
 @use '../../../styles/abstracts/mixins' as m;
 @use '../../../styles/abstracts/media' as media;
 
+
 .button__toggle-menu {
   transition: v.$transition-1;
-  position: absolute;
-  width: 25px;
-  top: 1.5rem;
-  right: 1rem;
-  z-index: 99;
+  border-radius: 5px;
+  position: relative;
+  z-index: 50;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 1.5em;
   padding: 3px;
 }
 
-@include media.responsive(md, max-width) {
-  .button__toggle-menu {
-    position: relative;
-    top: 0;
-    right: 0;
+@include media.responsive(md, min-width) {
+  .side-nav {
+    display: none;
+  }
+  .button__toggle-menu{
+    display: none;
   }
 }
-
-.button__toggle-menu:hover {
-  border-radius: 5px;
-  background-color: m.t(title);
-  color: m.t(bg-color);
-}
-

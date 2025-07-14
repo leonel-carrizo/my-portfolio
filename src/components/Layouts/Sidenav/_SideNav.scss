@@ -3,26 +3,17 @@
 @use '../../../styles/abstracts/mixins' as m;
 @use '../../../styles/abstracts/media' as media;
 
-.side-nav {
-  position: absolute;
-  left: 0;
-  top: 7rem;
-  width: 100%;
-  height: 35rem;
-  .button__toggle-theme{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    top: 6rem;
+@include m.themed() {
+  .side-nav {
+    background-color: m.t(bg-color);
+    @include m.bg-config();
   }
-
 }
 
-@include media.responsive(md, min-width) {
-  .side-nav {
-    display: none;
-  }
-  .button__toggle-menu{
-    display: none;
-  }
+.side-nav {
+  z-index: 5;
+  position: absolute;
+  bottom: -5rem;
+  width: 100vw;
+  height: calc(100vh - 0rem);
 }
