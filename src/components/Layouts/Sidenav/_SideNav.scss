@@ -19,9 +19,11 @@
   display: grid;
   justify-items: center;
   align-content: center;
-  gap: 6em;
+
   .button__toggle-theme {
     display: block;
+    position: relative;
+    bottom: 2em;
   }
 }
 

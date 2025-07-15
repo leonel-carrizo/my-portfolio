@@ -12,6 +12,7 @@ $themes: (
     text-hover: c.$primary--color,
     text-imp: c.$info--color,
     link:  c.$accent--color,
+    bg-color--accent: c.$greydark--color,
   ),
   dark: (
     bg: url('../src/assets/background-pattern-abs.svg'),
@@ -24,5 +25,6 @@ $themes: (
     text-hover: c.$tertiary--color,
     text-imp: c.$info--color,
     link: c.$accent--color,
+    bg-color--accent: c.$white--color,
   ),
 );
