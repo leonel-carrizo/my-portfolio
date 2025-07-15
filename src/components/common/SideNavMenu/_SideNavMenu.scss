@@ -40,8 +40,8 @@
     }
     &-item:hover {
       transform: v.$translate-1;
-      background-color: m.t(text-hover);
-      color: m.t(bg-color);
+      background-color: m.t(bg-color);
+      color: m.t(text-hover);
     }
   }
 }
