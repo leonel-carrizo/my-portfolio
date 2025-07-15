@@ -3,9 +3,6 @@
 
 @include m.themed() {
   .side-nav__menu {
-    position: absolute;
-    left: 25%;
-    top: 10rem;
     width: 50%;
     height: 50%;
     align-items: center;

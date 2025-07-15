@@ -13,7 +13,20 @@
 .side-nav {
   z-index: 5;
   position: absolute;
-  bottom: -5rem;
+  bottom: 0rem;
   width: 100vw;
-  height: calc(100vh - 0rem);
+  height: calc(100vh - 5rem);
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 6em;
+  .button__toggle-theme {
+    display: block;
+  }
+}
+
+@include media.responsive(md, min-width) {
+    .side-nav {
+    display: none;
+  }
 }
