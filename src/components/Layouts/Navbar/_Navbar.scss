@@ -13,7 +13,7 @@
   height: 5rem;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
 }
 
@@ -27,14 +27,17 @@
   padding: 3px;
 }
 
-@include media.responsive(md, min-width) {
+@include media.responsive(lg, min-width) {
   .button__toggle-menu{
     display: none;
   }
 }
 
-@include media.responsive(md, max-width) {
+@include media.responsive(lg, max-width) {
+  .nav {
+    justify-content: space-around;
   .button__toggle-theme {
     display: none;
   }
+}
 }

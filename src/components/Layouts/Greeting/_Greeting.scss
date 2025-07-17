@@ -2,10 +2,11 @@
 @use '../../../styles/abstracts/colors' as color;
 
 .greeting-section {
+  padding: 0 110px;
   height: calc(100vh - 5rem);
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   .greeting-section__content {
     display: flex;
     flex-direction: column;
@@ -27,6 +28,7 @@
 
 @include media.responsive(lg, max-width) {
   .greeting-section{
+    justify-content: space-evenly;
     .section-img {
       max-width: 30vw;
     }
@@ -36,9 +38,10 @@
 @include media.responsive(md, max-width) {
   .greeting-section{
     display: flex;
+    padding: 0;
     flex-direction: column;
      .section-img {
-      max-width: 55vw;
+      max-width: 60vw;
     }
   }
 }

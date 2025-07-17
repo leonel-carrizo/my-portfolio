@@ -23,7 +23,7 @@
     // TODO: create hightliting when be active
   }
 
-@include media.responsive(md, max-width) {
+@include media.responsive(lg, max-width) {
   .nav__main {
     &-menu {
       display: none;

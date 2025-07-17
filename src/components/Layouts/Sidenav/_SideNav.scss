@@ -27,7 +27,7 @@
   }
 }
 
-@include media.responsive(md, min-width) {
+@include media.responsive(lg, min-width) {
     .side-nav {
     display: none;
   }
