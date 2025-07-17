@@ -27,13 +27,13 @@
   padding: 3px;
 }
 
-@include media.responsive(lg, min-width) {
+@include media.responsive(laptop, min-width) {
   .button__toggle-menu{
     display: none;
   }
 }
 
-@include media.responsive(lg, max-width) {
+@include media.responsive(laptop, max-width) {
   .nav {
     justify-content: space-around;
   .button__toggle-theme {

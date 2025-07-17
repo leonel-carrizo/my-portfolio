@@ -1,11 +1,12 @@
 @use 'sass:map';
 
 $breakpoints: (
-  xs: 375px,
-  sm: 430px,
-  md: 769px,
-  lg: 1025px,
-  lx: 1280px,
+  mobileS: 321px,
+  mobileM: 376px,
+  mobileL: 426px,
+  tablet: 769px,
+  laptop: 1025px,
+  desktop: 1280px,
 );
 
 @mixin  responsive($size, $prop) {

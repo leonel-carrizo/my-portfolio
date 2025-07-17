@@ -26,22 +26,20 @@
   }
 }
 
-@include media.responsive(lg, max-width) {
+@include media.responsive(laptop, max-width) {
   .greeting-section{
     justify-content: space-evenly;
     .section-img {
-      max-width: 30vw;
+      max-width: 16rem;
     }
   }
 }
 
-@include media.responsive(md, max-width) {
+@include media.responsive(tablet, max-width) {
   .greeting-section{
     display: flex;
     padding: 0;
     flex-direction: column;
-     .section-img {
-      max-width: 60vw;
-    }
   }
 }
+

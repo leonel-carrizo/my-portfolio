@@ -1,6 +1,6 @@
 @use '../../../styles/abstracts/media' as media;
 
-@include media.responsive(md, max-width) {
+@include media.responsive(tablet, max-width) {
   header {
     display: flex;
     flex-direction: column;
