@@ -1,9 +1,4 @@
-// import { useContext } from 'react'
-// import { ThemeContext } from '../../../contexts/ThemeContext'
-
 function Greeting ({ name }) {
-  // const { handleTheme, theme } = useContext(ThemeContext)
-
   return (
     <section className='greeting-section'>
       <div className='greeting-section__content'>
