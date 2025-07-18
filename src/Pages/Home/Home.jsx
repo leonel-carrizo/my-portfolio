@@ -3,10 +3,14 @@ import Main from '../../components/Layouts/Main/Main'
 
 const Home = () => {
   return (
-    <header>
-      <Header />
-      <Main />
-    </header>
+    <>
+      <header>
+        <Header />
+      </header>
+      <main>
+        <Main />
+      </main>
+    </>
   )
 }
 
