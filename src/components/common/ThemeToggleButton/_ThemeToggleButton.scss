@@ -16,6 +16,7 @@
       border-radius: calc(v.$button-height / 2);
       position: relative;
       transition: 0.3s all ease-in-out;
+
       .button__moon {
         width: v.$icon-width;
         position: absolute;
@@ -23,6 +24,7 @@
         top: 0.2em;
         right: 0.2em;
       }
+
       .button__sun {
         width: v.$icon-width;
         position: absolute;
@@ -42,26 +44,19 @@
       top: v.$button-toggle-offset;
       transform: translateX(v.$button-toggle-offset);
       background: linear-gradient(180deg, #ffcc89, #d8860b);
-      box-shadow: v.$toggle-shadow-offset 0 calc(v.$toggle-shadow-offset * 4)
-        rgba(0, 0, 0, 0.1);
+      box-shadow: v.$toggle-shadow-offset 0 calc(v.$toggle-shadow-offset * 4) rgba(0, 0, 0, 0.1);
       transition: 0.3s all ease-in-out;
     }
 
-    .toggle-theme__input[type='checkbox']:checked + .toggle-theme__slider {
-      background: linear-gradient(
-        90deg,
-        c.$greydark--color,
-        c.$secondary--color
-      );
+    .toggle-theme__input[type='checkbox']:checked+.toggle-theme__slider {
+      background: linear-gradient(90deg,
+          c.$greydark--color,
+          c.$secondary--color );
     }
 
-    .toggle-theme__input[type='checkbox']:checked
-      + .toggle-theme__slider::after {
-      transform: translateX(
-        calc(v.$button-width - v.$toggle-diameter - v.$button-toggle-offset)
-      );
-      box-shadow: calc(v.$toggle-shadow-offset * -1) 0
-        calc(v.$toggle-shadow-offset * 4) rgba(0, 0, 0, 0.1);
+    .toggle-theme__input[type='checkbox']:checked+.toggle-theme__slider::after {
+      transform: translateX(calc(v.$button-width - v.$toggle-diameter - v.$button-toggle-offset));
+      box-shadow: calc(v.$toggle-shadow-offset * -1) 0 calc(v.$toggle-shadow-offset * 4) rgba(0, 0, 0, 0.1);
       background: v.$background-checked;
     }
 
@@ -69,16 +64,12 @@
       display: none;
     }
 
-    .toggle-theme__input[type='checkbox']:active
-      + .toggle-theme__slider::after {
+    .toggle-theme__input[type='checkbox']:active+.toggle-theme__slider::after {
       width: v.$toggle-wider;
     }
 
-    .toggle-theme__input[type='checkbox']:checked:active
-      + .toggle-theme__slider::after {
-      transform: translateX(
-        calc(v.$button-width - v.$toggle-wider - v.$button-toggle-offset)
-      );
+    .toggle-theme__input[type='checkbox']:checked:active+.toggle-theme__slider::after {
+      transform: translateX(calc(v.$button-width - v.$toggle-wider - v.$button-toggle-offset));
     }
   }
 }

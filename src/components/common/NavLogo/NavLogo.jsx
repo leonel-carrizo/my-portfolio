@@ -7,9 +7,9 @@ const NavLogo = ({ title }) => {
       <a href='#'>
         <Logo className='nav-logo__img' />
       </a>
-      {/* <a href='#'> */}
-      {/*   <h1 className='nav-logo__title'>{title}</h1> */}
-      {/* </a> */}
+      <a href='#'>
+        <h1 className='nav-logo__title'>{title}</h1>
+      </a>
     </div>
   )
 }

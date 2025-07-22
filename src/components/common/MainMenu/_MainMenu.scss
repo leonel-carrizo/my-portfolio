@@ -2,31 +2,24 @@
 @use '../../../styles/abstracts/colors' as c;
 @use '../../../styles/abstracts/media';
 
-.nav__main{
-    &-menu{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      height: 3rem;
-      flex-direction: row;
-      gap: 2rem;
-    }
-    &-link{
-      font-weight: 600;
-      transition: v.$transition-1;
-      font-size: 1.1rem;
-    }
-    &-link:hover{
-      transform: v.$translate-1;
-    }
-    // TODO: create hightliting when be active
+.nav__main {
+  &-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    gap: 2rem;
   }
 
-@include media.responsive(laptop, max-width) {
-  .nav__main {
-    &-menu {
-      display: none;
-    }
+  &-link {
+    font-weight: 600;
+    transition: v.$transition-1;
+    font-size: 1.1rem;
   }
+
+  &-link:hover {
+    transform: v.$translate-1;
+  }
+
+  // TODO: create hightliting when be active
 }

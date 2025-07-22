@@ -1,5 +1,6 @@
 @use './base/normalize';
 @use './base/app';
+@use './base/containers.scss';
 @use './abstracts/colors';
 @use './abstracts/variables';
 @use './themes/themes';
@@ -7,7 +8,8 @@
 @use '../components/Layouts/Navbar/Navbar';
 @use '../components/Layouts/Sidenav/SideNav';
 @use '../components/common/SideNavMenu/SideNavMenu';
-@use '/src/components//common/NavLogo/NavLogo';
+@use '../components/common/NavLogo/NavLogo';
 @use '../components/common/MainMenu/MainMenu.scss';
 @use '../components/common/ThemeToggleButton/ThemeToggleButton';
 @use '../components/Layouts/Greeting/Greeting';
+@use '../components/Layouts/Main/Main'
