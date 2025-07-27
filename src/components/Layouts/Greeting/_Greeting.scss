@@ -1,5 +1,6 @@
 @use '../../../styles/abstracts/media' as media;
 @use '../../../styles/abstracts/colors' as color;
+@use '../../../styles/abstracts/variables' as vari;
 
 .greeting-section {
   width: 100%;
@@ -9,6 +10,7 @@
   justify-content: space-between;
 
   .greeting-section__content {
+    gap: 2rem;
     max-width: 20rem;
     display: flex;
     flex-direction: column;
@@ -17,6 +19,15 @@
 
     .section-name {
       color: color.$accent--color2;
+    }
+    .greeting-section__buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      .button {
+        transition: vari.$transition-1;
+      }
     }
   }
 

@@ -3,7 +3,7 @@ import Greeting from '../Greeting/Greeting'
 function Main () {
   return (
     <main>
-      <Greeting name='Leonel' />
+      <Greeting />
     </main>
   )
 }

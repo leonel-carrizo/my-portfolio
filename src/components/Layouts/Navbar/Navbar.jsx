@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react'
 import { ThemeContext } from '../../../contexts/ThemeContext'
-import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
+import { IconMenu, IconCloseMenu } from '../../common/Icons/'
 
 import NavLogo from '../../common/NavLogo/NavLogo'
 import MainMenu from '../../common/MainMenu/MainMenu'
@@ -24,7 +24,7 @@ function Navbar () {
         </div>
         <ThemeToggleButton onClick={handleTheme} isDark={theme === 'dark'} />
         <div onClick={handleSideNavToggle} className='button__toggle-menu'>
-          {isSideNavOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
+          {isSideNavOpen ? <IconCloseMenu /> : <IconMenu />}
         </div>
         {isSideNavOpen ? (<SideNav />) : ''}
       </div>
