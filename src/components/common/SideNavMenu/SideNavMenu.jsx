@@ -1,4 +1,4 @@
-import { AiOutlineHome, AiOutlineProject, AiOutlineUser, AiOutlineContacts } from 'react-icons/ai'
+import { IconHome, IconPorfolio, IconContact, IconAboutMe } from '../Icons/'
 
 function SideNavMenu () {
   return (
@@ -7,28 +7,28 @@ function SideNavMenu () {
 
         <li className='side-nav__menu-item'>
           <a href='#main' className='side-nav__menu-link'>
-            <AiOutlineHome className='side-nav__menu-icon' />
+            <IconHome className='side-nav__menu-icon' />
             <p className='side-nav__menu-text'>Home</p>
           </a>
         </li>
 
         <li className='side-nav__menu-item'>
           <a href='#main' className='side-nav__menu-link'>
-            <AiOutlineUser className='side-nav__menu-icon' />
+            <IconAboutMe className='side-nav__menu-icon' />
             <p className='side-nav__menu-text'>About</p>
           </a>
         </li>
 
         <li className='side-nav__menu-item'>
           <a href='#main' className='side-nav__menu-link'>
-            <AiOutlineProject className='side-nav__menu-icon' />
+            <IconPorfolio className='side-nav__menu-icon' />
             <p className='side-nav__menu-text'>Portfolio</p>
           </a>
         </li>
 
         <li className='side-nav__menu-item'>
           <a href='#main' className='side-nav__menu-link'>
-            <AiOutlineContacts className='side-nav__menu-icon' />
+            <IconContact className='side-nav__menu-icon' />
             <p className='side-nav__menu-text'>Contact</p>
           </a>
         </li>
