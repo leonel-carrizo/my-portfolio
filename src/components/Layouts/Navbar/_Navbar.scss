@@ -5,6 +5,7 @@
 @include m.themed() {
   .nav {
     background-color: m.t(bg-color);
+    @include m.bg-config();
   }
 }
 

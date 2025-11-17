@@ -3,11 +3,11 @@
 @use '../../../styles/abstracts/variables' as vari;
 
 .greeting-section {
-  width: 100%;
+  width: 75%;
   height: calc(100vh - 5rem);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 
   .greeting-section__content {
     gap: 2rem;
@@ -15,16 +15,34 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    font-size: clamp(1.5rem, 2vw, 1.8rem);
+    line-height: 1.8;
+
+    .section-hello {
+      font-size: clamp(3rem, 2vw, 4rem);
+      font-family: tahoma;
+    }
 
     .section-name {
+      font-family: gotham;
       color: color.$accent--color2;
     }
+
+    .section-title {
+      font-size: 1.6rem;
+      
+    }
+
+    .section-description {
+      font-size: 1.2rem;
+      font-family: tahoma;
+    }
+
     .greeting-section__buttons {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 1rem;
+
       .button {
         transition: vari.$transition-1;
       }
@@ -32,7 +50,7 @@
   }
 
   .section-img {
-    max-width: 20rem;
+    max-width: 18rem;
 
     .profile_img {
       border-radius: 50%;

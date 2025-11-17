@@ -1,19 +1,23 @@
+@use '../../../styles/abstracts/colors' as color;
+@use '../../../styles/abstracts/mixins' as mix;
+
 .button {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
   cursor: pointer;
-  padding: 0.5rem 1.2rem;
+  padding: 0.18rem 0.6rem;
   border-radius: 0.375rem;
-  background-color: #b83d00;
+  color: color.$secondary--color;
+  background-color: color.$accent--color2;
   font-weight: 700;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
   border: 2px solid transparent;
   &:hover {
-    background-color: #ffffff;
+    background-color: mix.t(bg-color--accent);
     color: #000000;
-    border-color: #b83d00;
+    border-color: color.$accent--color2;
   }
 }
 

@@ -1,6 +1,6 @@
 @use '../../../styles/abstracts/variables' as v;
 @use '../../../styles/abstracts/colors' as c;
-@use '../../../styles/abstracts/media';
+@use '../../../styles/abstracts/mixins' as mix;
 
 .nav__main {
   &-menu {
@@ -12,14 +12,13 @@
   }
 
   &-link {
-    font-weight: 600;
+    font-weight: 500;
     transition: v.$transition-1;
     font-size: 1.1rem;
   }
 
   &-link:hover {
     transform: v.$translate-1;
+    color: mix.t(text-hover);
   }
-
-  // TODO: create hightliting when be active
 }
