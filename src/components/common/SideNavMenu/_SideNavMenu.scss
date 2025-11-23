@@ -1,48 +1,45 @@
-@use '../../../styles/abstracts/variables' as v;
-@use '../../../styles/abstracts/mixins' as m;
-@use '../../../styles/abstracts/colors' as c;
+@use '../../../styles/abstracts/variables' as vari;
+@use '../../../styles/abstracts/mixins' as mix;
+@use '../../../styles/abstracts/colors' as color;
 
+@include mix.themed() {
+  
+.side-nav__menu {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
 
-@include m.themed() {
-  .side-nav__menu {
-    position: relative;
-    width: 100%;
+  &-item {
+    color: mix.t(title);
     display: flex;
-    flex-direction: column;
-    align-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-
-    &-item {
-      background-color: m.t(bg-color--accent);
-      color: m.t(bg-color);
-      width: calc(18% + 4em);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 100px;
-      box-shadow: v.$box-shodow-2;
-      transition: v.$transition-1;
-      cursor: pointer;
-      padding: 0.6rem;
-    }
-    &-link {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      width: 100%;
-    }
-    &-icon {
-      padding-left: 1.2em;
-      font-size: 1.3em;
-    }
-    &-text {
-      width: 5em;
-    }
-    &-item:hover {
-      transform: v.$translate-1;
-      background-color: m.t(bg-color);
-      color: m.t(text-hover);
-    }
+    justify-content: center;
+    align-items: center;
+    transition: vari.$transition-1;
+    cursor: pointer;
   }
+
+  &-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+  }
+
+  .icon {
+      width: 1.5rem;
+    }
+
+  &-text {
+    font-size: 1.4em;
+    width: 5em;
+  }
+
+  &-item:hover {
+    color: mix.t(link);
+  }
+}
 }

@@ -7,24 +7,21 @@
   .side-nav {
     background-color: m.t(bg-color);
     @include m.bg-config();
-  }
-}
+    z-index: 5;
+    position: absolute;
+    bottom: 0rem;
+    right: 0rem;
+    width: 100dvw;
+    height: calc(100dvh - 4rem);
+    display: grid;
+    justify-items: center;
+    align-content: center;
 
-.side-nav {
-  z-index: 5;
-  position: absolute;
-  bottom: 0rem;
-  right: 0rem;
-  width: 100vw;
-  height: calc(100vh - 5rem);
-  display: grid;
-  justify-items: center;
-  align-content: center;
-
-  .button__toggle-theme {
-    display: block;
-    position: relative;
-    bottom: 2em;
+    .button__toggle-theme {
+      display: block;
+      position: absolute;
+      top: 4rem;
+    }
   }
 }
 

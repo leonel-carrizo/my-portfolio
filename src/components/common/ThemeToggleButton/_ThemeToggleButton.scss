@@ -60,6 +60,12 @@
       background: v.$background-checked;
     }
 
+    .toggle-theme__input[type='checkbox']:checked+.toggle-theme__slider .button__sun {
+      color: #ffcc89;
+      width: 1.08em;
+      stroke-width: 2.5;
+    }
+
     .toggle-theme__input {
       display: none;
     }
