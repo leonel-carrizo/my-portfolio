@@ -11,7 +11,7 @@
 
   .greeting-section__content {
     gap: 2rem;
-    max-width: 20rem;
+    max-width: 25rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -63,6 +63,7 @@
 @include media.responsive(laptop, max-width) {
   .greeting-section {
     gap: 3rem;
+    width: 85%;
   }
 }
 
