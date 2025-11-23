@@ -29,7 +29,7 @@
 
     .section-title {
       font-size: 1.6rem;
-      
+
     }
 
     .section-description {
@@ -72,9 +72,42 @@
       max-width: 16rem;
     }
 
+    .greeting-section__content {
+      .greeting-section__buttons {
+        justify-content: space-between;
+        width: 100%;
+      }
+
+    }
+
     display: flex;
     padding: 0;
     flex-direction: column-reverse;
     justify-content: center;
+  }
+}
+
+@include media.responsive(mobileX, max-width) {
+  .container {
+    padding: 0;
+
+    .greeting-section {
+      gap: 3.5rem;
+
+      .section-img {
+        max-width: 13rem;
+      }
+
+      .greeting-section__content {
+        max-width: 100%;
+        gap: 3rem;
+        line-height: 1.5;
+        align-items: center;
+
+        .section-hello {
+          font-size: 2rem;
+        }
+      }
+    }
   }
 }

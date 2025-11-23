@@ -9,8 +9,8 @@
 @include m.themed() {
   .app {
     font-family: 'gotham', Tahoma, Verdana, sans-serif, system-ui, Arial;
-    height: 100vh;
-    max-width: 100vw;
+    max-height: 100dvh;
+    max-width: 100dvw;
     color: m.t(title);
     @include m.bg-config();
     background-color: m.t(bg-color);
